@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AccomEditActivity extends AppCompatActivity {
 
     EditText accomOrgan,accomPos,accomFromyear,accomToyear;
-    int cardCount=0;
+    public int cardCount=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class AccomEditActivity extends AppCompatActivity {
 
         if(item.getItemId() == R.id.accom_save_action_button){
             //grabbing the details entered in the fields into cardview.
+            Toast.makeText(this,"Saved.",Toast.LENGTH_SHORT).show();
+
 
         }
         return super.onOptionsItemSelected(item);
