@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="View Image"
+
+        android:visible="true"
+        android:id="@+id/view_image_item"/>
+
+    <item android:title="Upload Image"
+
+        android:visible="true"
+        android:id="@+id/upload_image_item"/>
+
+
+
+</menu>
