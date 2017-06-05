@@ -21,6 +21,7 @@ import static android.R.attr.bitmap;
 
 public class MainActivity extends AppCompatActivity {
 
+    // This is a reference to catch Profile picture imagebutton view.
     ImageButton profilePicImage;
 
     private final static  int SELECTED_PICTURE=1;
@@ -31,31 +32,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         profilePicImage = (ImageButton) findViewById(R.id.profile_pic);
-      /*  profilePicImage.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "hello there", Toast.LENGTH_SHORT).show();
-
-                PopupMenu imagePopUpMenu = new PopupMenu(MainActivity.this,profilePicImage);
-                imagePopUpMenu.getMenuInflater().inflate(R.menu.image_dropdown_menu,imagePopUpMenu.getMenu());
-
-                imagePopUpMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener(){
-
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        if(item.getItemId()==R.id.upload_image_item)
-                            Toast.makeText(MainActivity.this, "hello there", Toast.LENGTH_SHORT).show();
-
-
-                        else     ;
-                        return  true;
-                    }
-                });
-            }
-        });*/
     }
 
+    // This method invokes when the upload button is clicked.
     public void onUploadButtonClicked(View view){
 
         Toast.makeText(MainActivity.this, "hello there", Toast.LENGTH_SHORT).show();
@@ -64,24 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /*public void onProPicImageClicked(View view){
-        Toast.makeText(MainActivity.this, "hello there", Toast.LENGTH_SHORT).show();
-        PopupMenu imagePopUpMenu = new PopupMenu(MainActivity.this,profilePicImage);
-        imagePopUpMenu.getMenuInflater().inflate(R.menu.image_dropdown_menu,imagePopUpMenu.getMenu());
 
-        imagePopUpMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                if (item.getItemId() == R.id.upload_image_item)
-                    Toast.makeText(MainActivity.this, "hello there", Toast.LENGTH_SHORT).show();
-
-
-                else ;
-                return true;
-            }
-        });
-    }*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(resultCode == RESULT_OK){
