@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // This method is when accom_plus_image is clicked.
+    public void onAccomPlusClicked(View view){
+        Toast.makeText(MainActivity.this, "hello lala there", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,AccomEditActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -20,7 +20,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="15dp"
-            android:onClick="onProPicImageClicked"
+            android:onClick="onUploadButtonClicked"
             android:scaleType="centerCrop"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -290,11 +290,13 @@
             app:layout_constraintTop_toBottomOf="@+id/editText3">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/accom_plus_image"
                 android:layout_width="50dp"
                 android:layout_height="43dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"
+                android:clickable="true"
+                android:onClick="onAccomPlusClicked"
                 app:layout_constraintBottom_toBottomOf="@+id/textView4"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView4"
@@ -315,7 +317,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/imageView7"
+                app:layout_constraintRight_toLeftOf="@+id/accom_plus_image"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
