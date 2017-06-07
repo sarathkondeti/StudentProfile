@@ -42,7 +42,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:text="2017"
+            android:text="2017abc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/accom_card_organ" />
@@ -65,7 +65,8 @@
             android:layout_marginTop="0dp"
             android:text="2020"
             app:layout_constraintLeft_toRightOf="@+id/textView12"
-            app:layout_constraintTop_toTopOf="@+id/textView12" />
+            app:layout_constraintTop_toTopOf="@+id/textView12"
+            app:layout_constraintDimensionRatio="" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

@@ -1,5 +1,6 @@
 package com.example.srikanth.studentprofile;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -36,7 +37,8 @@ public class AccomEditActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.accom_save_action_button){
             //grabbing the details entered in the fields into cardview.
             Toast.makeText(this,"Saved.",Toast.LENGTH_SHORT).show();
-
+            AccomDetailArray.makeAccomCard();
+            startActivity(new Intent(AccomEditActivity.this,MainActivity.class));
 
         }
         return super.onOptionsItemSelected(item);
