@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton profilePicImage;
     private final static  int SELECTED_PICTURE=1;
 
+
     RecyclerView accomRV;
     public static AccomAdapter accomadapter;
 
@@ -35,7 +36,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         profilePicImage = (ImageButton) findViewById(R.id.profile_pic);
+
+        profilePicImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final PopupMenu popupMenu = new PopupMenu(MainActivity.this,profilePicImage);
+                popupMenu.getMenuInflater().inflate(R.menu.image_dropdown_menu,popupMenu.getMenu());
+
+
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if(item.getItemId()==R.id.upload_image_item){
+                            onUploadButtonClicked();
+                        }
+
+                        return true;
+
+
+                    }
+                });
+
+                popupMenu.show();
+            }
+        });
+
+
+
 
         accomRV=(RecyclerView) findViewById(R.id.accom_rv);
         accomadapter=new AccomAdapter(this,AccomDetailArray.getAccomData());
@@ -48,13 +77,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // This method invokes when the upload button is clicked.
-    public void onUploadButtonClicked(View view){
+
+    public void onUploadButtonClicked(){
 
         Toast.makeText(MainActivity.this, "hello there", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent,SELECTED_PICTURE);
 
     }
+    /*****************************************************************/
 
     // This method is when accom_plus_image is clicked.
     public void onAccomPlusClicked(View view){
