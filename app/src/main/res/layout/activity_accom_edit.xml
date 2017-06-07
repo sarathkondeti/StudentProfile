@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/accom_organ"
+            android:id="@+id/accom_organ_edittext"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -35,7 +35,7 @@
             android:layout_marginTop="1000dp" />
 
         <EditText
-            android:id="@+id/accom_pos"
+            android:id="@+id/accom_pos_edittext"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -44,37 +44,38 @@
             android:hint="Position in Organisation"
             android:inputType="textPersonName"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/accom_organ"
+            app:layout_constraintTop_toBottomOf="@+id/accom_organ_edittext"
             android:layout_marginRight="8dp"
             app:layout_constraintRight_toRightOf="parent" />
 
         <EditText
-            android:id="@+id/accom_fromyear"
+            android:id="@+id/accom_fromyear_edittext"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="From"
             android:inputType="date"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/accom_pos"
+            app:layout_constraintTop_toBottomOf="@+id/accom_pos_edittext"
             android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="1.0" />
 
         <EditText
-            android:id="@+id/accom_toyear"
+            android:id="@+id/accom_toyear_edittext"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="To"
             android:inputType="date"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/accom_fromyear"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accom_fromyear_edittext" />
 
     </android.support.constraint.ConstraintLayout>
 

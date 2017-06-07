@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class AccomEditActivity extends AppCompatActivity {
 
-    EditText accomOrgan,accomPos,accomFromyear,accomToyear;
+    public static EditText accomOrgan,accomPos,accomFromyear,accomToyear;
     public int cardCount=0;
 
     @Override
@@ -17,10 +17,10 @@ public class AccomEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accom_edit);
 
-        accomOrgan = (EditText) findViewById(R.id.accom_organ);
-        accomPos = (EditText) findViewById(R.id.accom_pos);
-        accomFromyear = (EditText) findViewById(R.id.accom_fromyear);
-        accomToyear = (EditText) findViewById(R.id.accom_toyear);
+        accomOrgan = (EditText) findViewById(R.id.accom_organ_edittext);
+        accomPos = (EditText) findViewById(R.id.accom_pos_edittext);
+        accomFromyear = (EditText) findViewById(R.id.accom_fromyear_edittext);
+        accomToyear = (EditText) findViewById(R.id.accom_toyear_edittext);
     }
 
     @Override

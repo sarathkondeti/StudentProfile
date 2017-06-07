@@ -7,7 +7,9 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PopupMenu;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -23,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     // This is a reference to catch Profile picture imagebutton view.
     ImageButton profilePicImage;
-
     private final static  int SELECTED_PICTURE=1;
+
+    RecyclerView accomRV;
+    public static AccomAdapter accomadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         profilePicImage = (ImageButton) findViewById(R.id.profile_pic);
+
+        accomRV=(RecyclerView) findViewById(R.id.accom_rv);
+        accomadapter=new AccomAdapter(this,AccomDetailArray.getAccomData());
+        LinearLayoutManager layoutmanger=new LinearLayoutManager(this);
+        accomRV.setLayoutManager(layoutmanger);
+        accomRV.setAdapter(accomadapter);
+        accomRV.setHasFixedSize(true);
+
 
     }
 
