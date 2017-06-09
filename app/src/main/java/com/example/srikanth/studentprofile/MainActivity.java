@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         profilePicImage = (ImageButton) findViewById(R.id.profile_pic);
-
         profilePicImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // This method invokes when the upload button is clicked.
+    // This method invokes when the upload imagebutton is clicked.
 
     public void onUploadButtonClicked(){
 
@@ -84,14 +83,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent,SELECTED_PICTURE);
 
-    }
-    /*****************************************************************/
-
-    // This method is when accom_plus_image is clicked.
-    public void onAccomPlusClicked(View view){
-        Toast.makeText(MainActivity.this, "hello lala there", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this,AccomEditActivity.class);
-        startActivity(intent);
     }
 
 
@@ -116,4 +107,14 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+    /*****************************************************************/
+
+
+    // This method is when accom_plus_image is clicked.
+    public void onAccomPlusClicked(View view){
+        Toast.makeText(MainActivity.this, "hello lala there", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,AccomEditActivity.class);
+        startActivity(intent);
+    }
+
 }
