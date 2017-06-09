@@ -12,6 +12,16 @@
         android:visible="true"
         android:id="@+id/upload_image_item"/>
 
+    <item android:title="Default Image"
+
+        android:visible="true"
+        android:id="@+id/default_image_item"/>
+
+    <item android:title="Remove Image"
+
+        android:visible="true"
+        android:id="@+id/remove_image_item"/>
+
 
 
 </menu>

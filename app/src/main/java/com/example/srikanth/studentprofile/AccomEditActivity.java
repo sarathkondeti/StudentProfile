@@ -5,12 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class AccomEditActivity extends AppCompatActivity {
 
     public static EditText accomOrgan,accomPos,accomFromyear,accomToyear;
+
 
 
     @Override
@@ -22,6 +25,11 @@ public class AccomEditActivity extends AppCompatActivity {
         accomPos = (EditText) findViewById(R.id.accom_pos_edittext);
         accomFromyear = (EditText) findViewById(R.id.accom_fromyear_edittext);
         accomToyear = (EditText) findViewById(R.id.accom_toyear_edittext);
+
+
+
+
+
     }
 
     @Override
