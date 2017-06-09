@@ -1,15 +1,18 @@
 package com.example.srikanth.studentprofile;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class AccomPencilEdit extends AppCompatActivity {
     EditText accomPencilOrgan,accomPencilPos,accomPencilFromyear,accomPencilToyear;
-    Intent intent = getIntent();
-   // int position = Integer.parseInt(intent.getStringExtra(AccomAdapter.EXTRA_MESSAGE));
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,4 +32,40 @@ public class AccomPencilEdit extends AppCompatActivity {
         accomPencilToyear.setText(AccomAdapter.adapterData.get(AccomAdapter.postionValue).accomToyear);
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.accom_save_action,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.accom_save_action_button){
+            AlertDialog.Builder builder  = new AlertDialog.Builder(this);
+            builder.setMessage("Do you want to save changes?")
+                   .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                       @Override
+                       public void onClick(DialogInterface dialog, int which) {
+                           AccomAdapter.adapterData.get(AccomAdapter.postionValue).accomOrgan    = accomPencilOrgan   .getText().toString();
+                           AccomAdapter.adapterData.get(AccomAdapter.postionValue).accomPos      = accomPencilPos     .getText().toString();
+                           AccomAdapter.adapterData.get(AccomAdapter.postionValue).accomFromyear = accomPencilFromyear.getText().toString();
+                           AccomAdapter.adapterData.get(AccomAdapter.postionValue).accomToyear   = accomPencilToyear  .getText().toString();
+                           startActivity(new Intent(AccomPencilEdit.this,MainActivity.class));
+                       }
+                   })
+                   .setNegativeButton("Cancel",null);
+
+                    AlertDialog alertDialog = builder.create();
+                    alertDialog.show();
+
+
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
+
