@@ -7,12 +7,17 @@
         android:visible="true"
         android:id="@+id/view_image_item"/>
 
-    <item android:title="Upload Image"
+    <item android:title="Upload Image from Gallery"
 
         android:visible="true"
         android:id="@+id/upload_image_item"/>
 
-    <item android:title="Default Image"
+    <item android:title="Capture Image"
+
+        android:visible="true"
+        android:id="@+id/capture_image_item"/>
+
+    <item android:title="Set Default Image"
 
         android:visible="true"
         android:id="@+id/default_image_item"/>

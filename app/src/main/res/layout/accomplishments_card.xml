@@ -5,11 +5,9 @@
     android:id="@+id/accom_cardview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
     app:cardCornerRadius="2dp"
     app:cardElevation="4dp"
-    android:layout_marginStart="4dp"
-    android:layout_marginEnd="4dp">
+    android:layout_marginBottom="8dp" >
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/accom_card_constrainlayout"
@@ -23,7 +21,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="Intern"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textSize="24sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +33,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="Insti MobOps"
+            android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/accom_card_pos" />
 
